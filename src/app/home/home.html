@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <span>{{ title() }}</span>
+</mat-toolbar>
+<body>
+  <main>
+    <blockquote>
+      <h2>{{ subtitle }}</h2>
+    </blockquote>
+    <blockquote>
+      {{ body }}
+    </blockquote>
+
+    <app-select-gender />
+    <br />
+    <mat-divider />
+    <br />
+    <app-genders-list />
+  </main>
+</body>

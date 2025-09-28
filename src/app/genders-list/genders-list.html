@@ -1,0 +1,16 @@
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>There are currently {{ allGenders().length }} genders</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+            @if (allGenders().length > 0) {
+                @for (gender of allGenders(); track gender.symbol) {
+            <mat-list-item>{{ gender.symbol | uppercase }} - {{ gender.gender | titlecase }} - total count: {{gender.count}} </mat-list-item>
+                }
+            }
+
+        </mat-list>
+
+    </mat-expansion-panel>
+    </mat-accordion>
